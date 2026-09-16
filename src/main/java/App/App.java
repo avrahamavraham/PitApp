@@ -15,7 +15,8 @@ public class App {
         System.out.println(teamNumber);
         CommandCheck commandCheck = new CommandCheck();
         CheckButoons checkButoons = new CheckButoons();
-        Frame.getFrame().revalidate();
-        Frame.getFrame().repaint();
+        Frame.add(checkButoons);
+        Frame.add(commandCheck);
+        Frame.addTOFrame();
     }
 }

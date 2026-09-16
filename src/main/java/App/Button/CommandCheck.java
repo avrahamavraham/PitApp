@@ -10,11 +10,12 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 import App.Frame;
+import App.utils.defualtInterface;
 import edu.wpi.first.networktables.BooleanEntry;
 import edu.wpi.first.networktables.NetworkTableEvent;
 import edu.wpi.first.networktables.NetworkTableInstance;
 
-public class CommandCheck{
+public class CommandCheck implements defualtInterface{
     private final JButton startCommand = new JButton("Start command for check");
     private final JButton stopCommand = new JButton("Stop check command");
     private final JLabel label = new JLabel();
@@ -46,8 +47,25 @@ public class CommandCheck{
                 });
             }
         );
+
+    }
+
+    @Override
+    public void addToFrame() {
         Frame.getFrame().add("start cehck command",startCommand);
         Frame.getFrame().add("start cehck command",stopCommand);
         Frame.getFrame().add("is command active",label);
+    }
+
+    @Override
+    public void reset() {
+        commandEntry.accept(false);
+    }
+
+    @Override
+    public void hide() {
+        startCommand.setVisible(false);
+        stopCommand.setVisible(false);
+        label.setVisible(false);
     }
 }

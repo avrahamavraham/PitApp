@@ -14,9 +14,9 @@ public class CheckButoons implements defualtInterface {
     private final JButton isRIOandRadioCheck = new JButton("is radio and RIO connected properly?");
     private final JButton isAllSpicelRobotCurrect = new JButton("is all spicel robotc urrect (eg tape to open kick bar)");
     public CheckButoons(){
-        newBatrry.setBounds(0, 570, 200, 80);
+        newBatrry.setBounds(0, 600, 200, 80);
         setButtonConfig(newBatrry);
-        isAlltestPass.setBounds(200, 570, 200, 80);
+        isAlltestPass.setBounds(200, 600, 200, 80);
         setButtonConfig(isAlltestPass);
     }
     private void setButtonConfig(JButton button){
@@ -27,7 +27,7 @@ public class CheckButoons implements defualtInterface {
                 button1.setBackground(Color.red);
             } else {
                 button1.setBackground(Color.green);
-            } 
+            }
         });
     }
 
